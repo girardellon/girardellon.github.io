@@ -8,10 +8,10 @@
 /* Timeline entries: education, experience and projects */
 var TL = {
   "diploma": {
-    "title": "Technical Diploma (Electronics &amp; Automation)",
+    "title": "Technical High School Diploma",
     "sub": "ITIS Alessandro Rossi, Italy",
     "dates": "Sep 2018 — Jun 2023",
-    "desc": "Specialization in electronics, electrotechnics and industrial automation.",
+    "desc": "Specialization in electronics, electrical engineering and automation. Focused on the design of electrical and electronic systems and industrial automation.",
     "projects": [
       {
         "name": "Smart Warehouse: Automated Material Dispensing",
@@ -31,7 +31,7 @@ var TL = {
     "title": "Erasmus+ Exchange Program",
     "sub": "Heraklion, Greece",
     "dates": "Jul 2022",
-    "desc": "Short-term technical exchange program. Completed a professional internship at Dimitriadis Marine Service, gaining practical experience in an international environment.",
+    "desc": "Short-term technical exchange program including a professional internship at Dimitriadis Marine Service, gaining practical experience in an international technical environment.",
     "projects": []
   },
   "bsc": {
@@ -54,7 +54,7 @@ var TL = {
     "title": "Erasmus+ Exchange Program",
     "sub": "UPC Barcelona, Spain",
     "dates": "Sep 2025 — Jan 2026",
-    "desc": "Semester focused on robotics and control engineering, with practical experience in mobile robotics and MATLAB applications.",
+    "desc": "Focused on robotics and control engineering. Coursework and practical experience in mobile robotics, power electronics, and MATLAB-based engineering applications.",
     "projects": [
       {
         "name": "Multi-Robot Warehouse Optimization Simulator",
@@ -66,28 +66,28 @@ var TL = {
     "title": "MSc Control Systems Engineering",
     "sub": "University of Padua, Italy",
     "dates": "Sep 2026 — Jul 2028",
-    "desc": "Focused on advanced robot control, reinforcement learning, computer vision, and deep learning.",
+    "desc": "Focused on control systems, robotics, autonomous systems, and artificial intelligence, with emphasis on robot control, reinforcement learning, computer vision, and deep learning.",
     "projects": []
   },
   "mep": {
     "title": "Technical Office Specialist",
     "sub": "MEP Solution Srl, Italy",
     "dates": "Nov 2023 — Present",
-    "desc": "Worked on the design and technical documentation of electrical and photovoltaic systems. Involved in technical analysis and cost estimation.",
+    "desc": "Contributed to the design and technical documentation of electrical and photovoltaic systems, including technical analysis and cost estimation.",
     "projects": []
   },
   "robotac": {
     "title": "Robotics Research Intern",
     "sub": "RoboTac Lab at BMW Group, Germany",
     "dates": "Feb 2026",
-    "desc": "Worked on ROS2-based robotic systems in a research environment. Contributed to robot system integration, motion planning, and experimental validation.",
+    "desc": "Contributed to the development and integration of ROS 2-based robotic systems, with a focus on motion planning and experimental validation in a research environment.",
     "projects": []
   },
   "p-smart-warehouse": {
     "title": "Smart Warehouse: Automated Material Dispensing",
     "sub": "Institutional SCRUM Project · ITIS Alessandro Rossi",
     "dates": "Apr 2021 — May 2021",
-    "desc": "An automated carousel and dosing system designed to streamline raw material selection and eliminate human error through an integrated Archimedes screw.",
+    "desc": "An automated carousel storage and dosing system designed to streamline raw material selection and improve dispensing precision through an integrated Archimedes screw.",
     "projects": [],
     "open": "projects/smart-warehouse.html"
   },
@@ -95,7 +95,7 @@ var TL = {
     "title": "BerryBot: Automated Strawberry Harvesting System",
     "sub": "Siemens Automation Olympics 2022",
     "dates": "Jan 2022 — May 2022",
-    "desc": "An automated greenhouse robotic system that leverages computer vision and an anthropomorphic arm to delicately harvest strawberries.",
+    "desc": "An automated greenhouse harvesting system combining computer vision and a robotic arm to identify and pick ripe strawberries.",
     "projects": [],
     "open": "projects/berrybot.html"
   },
@@ -103,7 +103,7 @@ var TL = {
     "title": "ChessBot: Automated 3-Axis Chess-Playing Robot",
     "sub": "Personal Project",
     "dates": "Oct 2022 — Nov 2022",
-    "desc": "A 3-axis Cartesian robot seamlessly integrating a Siemens PLC with a Python-based chess engine, translating game logic into precise movements.",
+    "desc": "A 3-axis Cartesian robot integrating a Siemens PLC with a Python-based chess engine to translate game logic into precise physical movements.",
     "projects": [],
     "open": "projects/chessbot.html"
   },
@@ -111,7 +111,7 @@ var TL = {
     "title": "Multi-Robot Warehouse Optimization Simulator",
     "sub": "Course \"MATLAB and its application in engineering\" · UPC Barcelona",
     "dates": "Dec 2025",
-    "desc": "A comprehensive MATLAB simulation framework featuring custom-built path planning algorithms, priority-based collision avoidance, and energy management.",
+    "desc": "A MATLAB simulation framework featuring custom path-planning algorithms, priority-based collision avoidance, and energy-aware robot management.",
     "projects": [],
     "open": "projects/warehouse-simulator.html"
   },
@@ -119,7 +119,7 @@ var TL = {
     "title": "Redundancy Resolution: Kinematic Control for Franka Panda",
     "sub": "Course \"Introduction to Robotics\" · University of Padua",
     "dates": "Jun 2026",
-    "desc": "Kinematic control framework leveraging CLIK and null-space projection to optimize internal arm posture without disturbing end-effector tracking.",
+    "desc": "A kinematic control framework combining CLIK and null-space projection to optimize joint configuration while preserving end-effector trajectory tracking.",
     "projects": [],
     "open": "projects/redundancy-control.html"
   },
@@ -127,7 +127,7 @@ var TL = {
     "title": "Tactile-to-Visual Representation Learning for VLA Models",
     "sub": "BSc Thesis Project · University of Padua",
     "dates": "Jul 2026",
-    "desc": "A multimodal representation framework projecting DIGIT optical tactile signals into the frozen visual latent space of a Vision-Language-Action model.",
+    "desc": "A multimodal framework that maps DIGIT optical tactile embeddings into the frozen visual latent space of a Vision-Language-Action model.",
     "projects": [],
     "open": "projects/bsc-thesis.html"
   },
@@ -135,13 +135,13 @@ var TL = {
     "title": "National Automation Competition",
     "sub": "IIS “Belluzzi – Fioravanti”, Bologna, Italy",
     "dates": "May 2022",
-  "desc": "Won this individual national competition, sponsored by Omron. It combined a theory test on electrical engineering with a practical challenge: programming an industrial plant with a PLC and developing its human-machine interface (HMI)."
+  "desc": "Won a national individual competition sponsored by Omron, combining a theoretical test in electrical engineering with a practical challenge involving PLC programming for an industrial plant and the development of its human-machine interface (HMI)."
   },
   "c-machine-tool-2023": {
     "title": "Machine Tool and Mechatronics Olympics",
     "sub": "Confindustria Vicenza, Italy",
     "dates": "Mar 2023",
-    "desc": "Won this practical competition organized by Confindustria Vicenza, in which participants had to develop a solution to a specific industrial requirement set by the organizers."
+    "desc": "Won a practical competition organised by Confindustria Vicenza, challenging participants to develop a technical solution to an industrial problem defined by the organisers."
   }
 };
 

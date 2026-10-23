@@ -73,22 +73,22 @@
       <!-- Problem Statement -->
       <section class="ptxt grid">
         <h2 class="lab">Problem Statement</h2>
-        <p class="b">Redundant manipulators like the 7-DOF Franka Emika Panda possess more degrees of freedom than required for standard 6-D Cartesian tasks. The core engineering challenge was to track a precise circular Cartesian trajectory while simultaneously exploiting the arm's internal kinematic redundancy to prevent joints from reaching mechanical limits and avoid kinematic singularities.</p>
+        <p class="b">Redundant manipulators such as the 7-DOF Franka Emika Panda have more degrees of freedom than required for standard 6-D Cartesian tasks. The main engineering challenge was to accurately track a circular Cartesian trajectory while exploiting the robot's kinematic redundancy to avoid joint limits and reduce the risk of kinematic singularities.</p>
       </section>
 
       <!-- Proposed Solution -->
       <section class="ptxt grid">
         <h2 class="lab">Proposed Solution</h2>
-        <p class="b">I developed a Closed-Loop Inverse Kinematics (CLIK) control scheme using Jacobian pseudoinverse formulations to execute the primary tracking task. To utilize the extra degree of freedom, I implemented a null-space projection law <i>(I &minus; J<sup>+</sup>J)</i> that projects secondary optimization goals—specifically joint-centering gradient descent and Yoshikawa manipulability index maximization—without affecting end-effector motion. The pipeline was validated in MATLAB and ported to a real-time C++ ROS 2 controller plugin for MuJoCo simulation.</p>
+        <p class="b">I developed a Closed-Loop Inverse Kinematics (CLIK) control scheme based on the Jacobian pseudoinverse to execute the primary trajectory-tracking task. To exploit the additional degree of freedom, I implemented a null-space projection law <i>(I &minus; J<sup>+</sup>J)</i> to incorporate secondary objectives—specifically, joint-centering gradient descent and Yoshikawa manipulability maximization—while preserving primary-task tracking. The control pipeline was validated in MATLAB and subsequently implemented as a C++ ROS 2 controller plugin for MuJoCo simulation.</p>
       </section>
 
       <!-- Key Results -->
       <section class="ptxt grid">
         <h2 class="lab">Key Results</h2>
         <ol>
-          <li>Validated null-space projection theory, maintaining sub-millimeter trajectory accuracy (error &lt; 0.7 mm) regardless of secondary objective activation.</li>
-          <li>Demonstrated effective joint-limit avoidance, reducing the average joint displacement index from 0.0627 to 0.0429 (~31% posture optimization).</li>
-          <li>Engineered a complete C++ ROS 2 control plugin incorporating KDL forward kinematics and real-time Jacobian decomposition.</li>
+          <li>Validated null-space projection, maintaining trajectory-tracking accuracy with and without secondary objectives enabled.</li>
+          <li>Demonstrated effective joint-limit avoidance, reducing the average joint displacement index from 0.0627 to 0.0429, a reduction of approximately 31%.</li>
+          <li>Developed a complete C++ ROS 2 control plugin integrating KDL-based forward kinematics and real-time Jacobian decomposition.</li>
         </ol>
       </section>
 

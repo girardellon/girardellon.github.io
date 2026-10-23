@@ -82,22 +82,22 @@
       <!-- Problem Statement -->
       <section class="ptxt grid">
         <h2 class="lab">Problem Statement</h2>
-        <p class="b">The objective of this technical exercise was to build an automated system capable of playing chess against a human opponent while physically interacting with the chessboard. The core engineering challenge lay in bridging the gap between abstract game logic and physical actuation—specifically, enabling a Cartesian robot to accurately pick up, move, and remove pieces without human intervention.</p>
+        <p class="b">The objective of this technical exercise was to build an automated system capable of playing chess against a human opponent while physically interacting with the chessboard. The main engineering challenge was to bridge the gap between abstract game logic and physical actuation, enabling a Cartesian robot to accurately pick up, move, and remove pieces without human intervention.</p>
       </section>
 
       <!-- Proposed Solution -->
       <section class="ptxt grid">
         <h2 class="lab">Proposed Solution</h2>
-        <p class="b">I developed a comprehensive hardware-software architecture using a Siemens PLC to coordinate three stepper motors via the PROFINET protocol. The cognitive "brain" of the system is the Sunfish chess engine running in Python, which validates the player's moves and calculates the machine's response. Communication between the Python engine and the Siemens PLC is achieved through the OPC UA protocol. To complete the system, I designed a retro-1980s inspired HMI panel in TIA Portal, providing users with an intuitive interface to input their moves and control the system.</p>
+        <p class="b">I developed a comprehensive hardware-software architecture using a Siemens PLC to coordinate three stepper motors via PROFINET. The system's cognitive core is the Sunfish chess engine, implemented in Python, which validates human moves and calculates the robot's responses. Communication between the Python engine and the Siemens PLC is handled via OPC UA. To complete the system, I designed a retro-1980s-inspired HMI panel in TIA Portal, providing an intuitive interface for entering moves and controlling the robot.</p>
       </section>
 
       <!-- Key Results -->
       <section class="ptxt grid">
         <h2 class="lab">Key Results</h2>
         <ol>
-          <li>Successfully designed and deployed a complete IT/OT integration project, connecting high-level Python logic with low-level Siemens hardware.</li>
-          <li>Engineered precise electromechanical control for a 3-axis robotic system equipped with a DH-ROBOTICS electric gripper to handle chess pieces.</li>
-          <li>Developed a fully functional, user-friendly HMI that accurately maps chessboard coordinates, handles invalid move validation, and manages the homing routine.</li>
+          <li>Designed and deployed a complete IT/OT integration project, connecting high-level Python logic with Siemens PLC hardware.</li>
+          <li>Engineered precise electromechanical control for a 3-axis Cartesian robotic system equipped with a DH-ROBOTICS electric gripper to handle chess pieces.</li>
+          <li>Developed a functional, user-friendly HMI that maps chessboard coordinates, validates moves, handles invalid inputs, and manages the homing routine.</li>
         </ol>
       </section>
 

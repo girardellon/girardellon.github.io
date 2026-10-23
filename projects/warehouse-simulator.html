@@ -67,27 +67,22 @@
       <!-- Problem Statement -->
       <section class="ptxt grid">
         <h2 class="lab">Problem Statement</h2>
-        <p class="b">Modern automated warehouses rely on multi-robot fleets to maximize throughput, presenting complex engineering challenges in path planning, coordination, and energy optimization. The objective was to solve how multiple autonomous robots can efficiently navigate a shared discrete 2D grid, fulfill dynamic orders, and avoid conflicts in real-time without suffering from computational bottlenecks.</p>
+        <p class="b">Modern automated warehouses rely on multi-robot fleets to maximize throughput, presenting complex engineering challenges in path planning, coordination, and energy optimization. The objective was to determine how multiple autonomous robots could efficiently navigate a shared discrete 2D grid, fulfil dynamic orders, and avoid conflicts in real time without encountering computational bottlenecks.</p>
       </section>
-
-      <!-- Simulation still (placeholder) -->
-      <div class="pm pm-flush">
-        <div class="ph ph-render ph-16-9"><span>Simulation still</span></div>
-      </div>
 
       <!-- Proposed Solution -->
       <section class="ptxt grid">
         <h2 class="lab">Proposed Solution</h2>
-        <p class="b">I engineered a fully functional, object-oriented MATLAB application with a custom App Designer GUI. The core relies on grid-based path planning using both A* (Manhattan, Euclidean, Chebyshev) and Dijkstra algorithms. I developed a priority-based coordination framework for collision avoidance, a greedy nearest-robot algorithm for task assignment, and a dynamic battery consumption model that autonomously routes depleted robots to charging stations.</p>
+        <p class="b">I engineered a fully functional, object-oriented MATLAB application featuring a custom App Designer GUI. The core system implements grid-based path planning using both A* (Manhattan, Euclidean, and Chebyshev heuristics) and Dijkstra's algorithm. I developed a priority-based coordination framework for collision avoidance, a greedy nearest-robot algorithm for task assignment, and a dynamic battery consumption model that automatically routes depleted robots to charging stations.</p>
       </section>
 
       <!-- Key Results -->
       <section class="ptxt grid">
         <h2 class="lab">Key Results</h2>
         <ol>
-          <li>Successfully simulated complex logistics scenarios with up to 6 concurrent robots in dense, obstacle-heavy environments.</li>
-          <li>Demonstrated and quantified the computational efficiency of the heuristic-guided A* algorithm over Dijkstra, achieving identical paths while exploring significantly fewer nodes.</li>
-          <li>Validated the robustness of the priority-based collision avoidance and energy-aware task allocation logic during high-intensity operations.</li>
+          <li>Successfully simulated complex logistics scenarios involving up to six concurrent robots in dense, obstacle-rich environments.</li>
+          <li>Demonstrated the computational efficiency of heuristic-guided A* compared with Dijkstra's algorithm, achieving identical path costs while exploring significantly fewer nodes.</li>
+          <li>Validated the robustness of the priority-based collision avoidance and energy-aware task allocation mechanisms under intensive operating conditions.</li>
         </ol>
       </section>
 
