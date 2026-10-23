@@ -16,6 +16,11 @@
   --mut: #777;
   --rule: #d9d9d9;
   --f: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Type scale: tweak these three values to resize the text of the whole site */
+  --fs-base: 17px;  /* body text */
+  --fs-sm: 15px;    /* secondary text: meta, captions, small links */
+  --fs-xs: 12.5px;  /* uppercase labels */
 }
 
 html {
@@ -25,8 +30,10 @@ html {
 body {
   background: #fff;
   color: var(--ink);
-  font: 400 15px/1.5 var(--f);
+  font: 400 var(--fs-base)/1.55 var(--f);
   padding: 0 2rem;
+  /* Keep arrows such as ↗ as text glyphs: iOS would otherwise render them as emoji */
+  font-variant-emoji: text;
 }
 
 a {
@@ -40,11 +47,12 @@ h3 {
   font-weight: 700;
   letter-spacing: -.02em;
   line-height: 1.05;
+  overflow-wrap: break-word;
 }
 
 /* Small uppercase label */
 .lab {
-  font-size: 11px;
+  font-size: var(--fs-xs);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .12em;
@@ -91,7 +99,7 @@ header.top {
   justify-content: space-between;
   align-items: baseline;
   padding: 1.6rem 0;
-  font-size: 12px;
+  font-size: var(--fs-sm);
   letter-spacing: .02em;
 }
 
@@ -118,7 +126,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 1.2rem 0 2rem;
-  font-size: 12px;
+  font-size: var(--fs-sm);
   color: var(--mut);
 }
 
@@ -141,7 +149,7 @@ footer a:hover {
 .ph span {
   background: #f4f4f4;
   padding: .2rem .6rem;
-  font-size: 11px;
+  font-size: var(--fs-xs);
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--mut);
@@ -179,6 +187,7 @@ footer a:hover {
 /* Hero */
 .hero {
   min-height: 78vh;
+  min-height: 78svh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -203,7 +212,7 @@ footer a:hover {
 
 .hero .role {
   grid-column: 1 / 6;
-  font-size: 1.35rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -.01em;
@@ -213,8 +222,8 @@ footer a:hover {
   grid-column: 9 / 13;
   display: flex;
   flex-direction: column;
-  gap: .15rem;
-  font-size: 13px;
+  gap: .25rem;
+  font-size: var(--fs-sm);
 }
 
 .lk a:hover,
@@ -266,7 +275,9 @@ section.sec {
 
 section.sec > .sh {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: .6rem 1.5rem;
   margin-bottom: 3rem;
 }
 
@@ -282,7 +293,7 @@ section.sec > .sh {
 
 .work .num {
   grid-column: 1 / 2;
-  font-size: 12px;
+  font-size: var(--fs-sm);
   color: var(--mut);
 }
 
@@ -296,17 +307,17 @@ section.sec > .sh {
 }
 
 .work h3 {
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-size: clamp(1.7rem, 3.2vw, 2.8rem);
   margin-bottom: .9rem;
 }
 
 .work .ctx {
   color: var(--mut);
-  font-size: 13px;
+  font-size: var(--fs-sm);
 }
 
 .work .tg {
-  font-size: 13px;
+  font-size: var(--fs-sm);
   margin-bottom: 1.2rem;
 }
 
@@ -350,6 +361,15 @@ section.sec > .sh {
   flex: 0 0 110px;
 }
 
+/* Lane labels stay visible while the timeline scrolls horizontally on small screens */
+.tl-years .lc,
+.tl-lane .ln {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+}
+
 .tl-yr {
   position: relative;
   flex: 1;
@@ -359,7 +379,7 @@ section.sec > .sh {
 .tl-yr span {
   position: absolute;
   bottom: 3px;
-  font-size: 11px;
+  font-size: var(--fs-xs);
   color: var(--mut);
   transform: translateX(2px);
 }
@@ -370,7 +390,7 @@ section.sec > .sh {
 }
 
 .tl-lane .ln {
-  font-size: 11px;
+  font-size: var(--fs-xs);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -415,7 +435,7 @@ section.sec > .sh {
   left: 0;
   bottom: 5px;
   white-space: nowrap;
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 500;
 }
 
@@ -464,14 +484,14 @@ section.sec > .sh {
 }
 
 .tl-panel h3 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: .3rem;
 }
 
 .tl-sub,
 .tl-hint {
   color: var(--mut);
-  font-size: 13px;
+  font-size: var(--fs-sm);
   margin-bottom: .6rem;
 }
 
@@ -492,7 +512,7 @@ section.sec > .sh {
 }
 
 .tl-rel strong {
-  font-size: 11px;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: .1em;
   color: var(--mut);
@@ -516,7 +536,7 @@ section.sec > .sh {
 .pgh .lead {
   max-width: 32em;
   margin-top: 2rem;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   color: var(--mut);
 }
 
@@ -540,18 +560,18 @@ section.sec > .sh {
 
 .plist .d {
   grid-column: 1 / 3;
-  font-size: 12px;
+  font-size: var(--fs-sm);
   color: var(--mut);
 }
 
 .plist h3 {
   grid-column: 3 / 8;
-  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+  font-size: clamp(1.45rem, 2.4vw, 2.1rem);
 }
 
 .plist .m {
   grid-column: 8 / 13;
-  font-size: 13px;
+  font-size: var(--fs-sm);
 }
 
 .plist .m .c {
@@ -567,7 +587,7 @@ section.sec > .sh {
 .plist .rowlinks {
   grid-column: 8 / 13;
   margin-top: .8rem;
-  font-size: 13px;
+  font-size: var(--fs-sm);
 }
 
 /* Education list */
@@ -581,7 +601,7 @@ section.sec > .sh {
 
 .edu .when {
   grid-column: 1 / 4;
-  font-size: 12px;
+  font-size: var(--fs-sm);
   color: var(--mut);
 }
 
@@ -590,7 +610,7 @@ section.sec > .sh {
 }
 
 .edu h3 {
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-size: clamp(1.6rem, 3.1vw, 2.6rem);
   margin-bottom: .8rem;
 }
 
@@ -622,14 +642,14 @@ section.sec > .sh {
 
 .ph-head dl {
   grid-column: 1 / 4;
-  font-size: 12px;
+  font-size: var(--fs-sm);
 }
 
 .ph-head dt {
   color: var(--mut);
   text-transform: uppercase;
   letter-spacing: .1em;
-  font-size: 10.5px;
+  font-size: var(--fs-xs);
   margin-top: .9rem;
 }
 
@@ -690,7 +710,7 @@ section.sec > .sh {
 
 .ptxt .b {
   grid-column: 4 / 11;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   max-width: 36em;
 }
@@ -713,7 +733,7 @@ section.sec > .sh {
   content: counter(n, decimal-leading-zero);
   position: absolute;
   left: 0;
-  font-size: 12px;
+  font-size: var(--fs-sm);
   color: var(--mut);
   top: 1.15rem;
 }
@@ -768,7 +788,7 @@ section.sec > .sh {
 
 .ct .intro {
   grid-column: 1 / 6;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.35;
 }
 
@@ -776,7 +796,7 @@ section.sec > .sh {
   grid-column: 8 / 13;
   display: flex;
   flex-direction: column;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 700;
   letter-spacing: -.02em;
 }
@@ -803,7 +823,7 @@ section.sec > .sh {
 }
 
 .form label {
-  font-size: 11px;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: .1em;
   color: var(--mut);
@@ -814,7 +834,8 @@ section.sec > .sh {
 .form input,
 .form textarea {
   font: inherit;
-  font-size: 15px;
+  /* Must stay >= 16px, otherwise iOS Safari zooms the page on focus */
+  font-size: max(16px, var(--fs-base));
   color: var(--ink);
   border: 0;
   border-bottom: 1px solid var(--ink);
@@ -847,6 +868,7 @@ section.sec > .sh {
    -------------------------------------------------------------------------- */
 .nf {
   min-height: 60vh;
+  min-height: 60svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -871,11 +893,30 @@ section.sec > .sh {
 }
 
 /* --------------------------------------------------------------------------
-   Responsive: tablets and phones (max 860px)
+   Touch devices: larger tap targets
+   -------------------------------------------------------------------------- */
+@media (hover: none) {
+  .dot {
+    width: 18px;
+    height: 18px;
+    margin-left: -9px;
+  }
+
+  .dot.t0 {
+    top: 6px;
+  }
+
+  .tl-rel a {
+    padding: .25rem 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive: tablets and phones (max 860px) – single-column layout
    -------------------------------------------------------------------------- */
 @media (max-width: 860px) {
   body {
-    padding: 0 1.1rem;
+    padding: 0 1.5rem;
   }
 
   /* Every grid child spans the full width */
@@ -891,10 +932,6 @@ section.sec > .sh {
     grid-column: 1 / -1 !important;
   }
 
-  .hero .hm {
-    row-gap: 1.5rem;
-  }
-
   .work,
   .plist .r,
   .edu .r,
@@ -904,11 +941,61 @@ section.sec > .sh {
     grid-template-columns: 1fr;
   }
 
+  /* Hero: the big title scales with the screen width */
+  .hero {
+    min-height: 72vh;
+    min-height: 72svh;
+  }
+
+  .hero h1 {
+    font-size: 19vw;
+    margin-top: 5vh;
+  }
+
+  .hero .hm {
+    row-gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .hero .lk {
+    gap: .5rem;
+  }
+
+  /* Page titles */
+  .pgh h1 {
+    font-size: clamp(2.8rem, 12vw, 6.5rem);
+  }
+
+  .ct .big {
+    font-size: clamp(3.4rem, 19vw, 9rem);
+  }
+
+  /* Vertical rhythm */
+  .info,
+  section.sec {
+    padding-bottom: 4rem;
+  }
+
+  .info > div {
+    margin-bottom: 2rem;
+  }
+
   .work .ph {
     margin: 1rem 0;
   }
 
-  .info > div {
+  .plist .r,
+  .edu .r {
+    row-gap: .5rem;
+  }
+
+  .ct .grid {
+    row-gap: 1.5rem;
+  }
+
+  /* Project page: title first, then the metadata list */
+  .ph-head h1 {
+    order: -1;
     margin-bottom: 2rem;
   }
 
@@ -916,15 +1003,87 @@ section.sec > .sh {
     grid-template-columns: 1fr;
   }
 
-  .ph-head dl {
-    margin-bottom: 1.5rem;
+  /* The second box is stretched on desktop; on a single column media keep
+     their natural ratio and placeholders get a fixed one */
+  .pm2 .ph:nth-child(2):not(.ph-media) {
+    aspect-ratio: 4 / 3;
+  }
+
+  .ptxt .b {
+    font-size: 1.2rem;
+  }
+
+  .pn {
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .tl-panel {
     margin-left: 0;
   }
 
-  .plist .d {
-    margin-bottom: .3rem;
+  .form {
+    margin: 2rem 0 4rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive: phones (max 560px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 560px) {
+  :root {
+    --fs-base: 16px;
+    --fs-sm: 14.5px;
+    --fs-xs: 12px;
+  }
+
+  body {
+    padding: 0 1.25rem;
+  }
+
+  /* Header: name on the first row, menu on the second */
+  header.top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .8rem;
+    padding: 1.2rem 0 1rem;
+  }
+
+  header.top nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.4rem;
+  }
+
+  header.top nav a {
+    margin-left: 0;
+  }
+
+  .hero .role {
+    font-size: 1.4rem;
+  }
+
+  .ct .intro {
+    font-size: 1.3rem;
+  }
+
+  .ct .ln {
+    font-size: 1.6rem;
+  }
+
+  .ptxt .b {
+    font-size: 1.1rem;
+  }
+
+  .pgh .lead {
+    font-size: 1.15rem;
+  }
+
+  .flipbook {
+    height: 520px;
+  }
+
+  .flipbook-landscape {
+    height: 280px;
   }
 }
