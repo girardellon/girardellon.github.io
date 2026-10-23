@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page metadata -->
+  <title>ChessBot: Automated 3-Axis Chess-Playing Robot · Nicolò Girardello</title>
+  <meta name="description" content="Portfolio of Nicolò Girardello, MSc Student in Control Systems Engineering. Exploring robotics, machine learning, and automation.">
+  <meta name="author" content="Nicolò Girardello">
+  <link rel="canonical" href="https://girardellon.github.io/projects/chessbot.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ChessBot: Automated 3-Axis Chess-Playing Robot · Nicolò Girardello">
+  <meta property="og:description" content="Portfolio of Nicolò Girardello, MSc Student in Control Systems Engineering. Exploring robotics, machine learning, and automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://girardellon.github.io/projects/chessbot.html">
+  <meta property="og:image" content="https://girardellon.github.io/assets/images/og-image.jpg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Flipbook (dFlip) styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dflip/css/dflip.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dflip/css/themify-icons.min.css">
+
+  <!-- Icons and manifest -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png?v=2">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Site header -->
+    <header class="top">
+      <a class="nm" href="../index.html">Nicolò Girardello</a>
+      <nav>
+        <a href="../index.html">Index</a>
+        <a href="../education.html">Education</a>
+        <a href="../projects.html" class="active" aria-current="page">Projects</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Project header -->
+      <div class="ph-head grid">
+        <dl>
+          <dt>Date</dt>
+          <dd>Oct 2022 — Nov 2022</dd>
+          <dt>Category</dt>
+          <dd>Robotics &amp; Control Systems</dd>
+          <dt>Stack</dt>
+          <dd>Siemens S7 PLC · TIA Portal · Python (Sunfish) · PROFINET · OPC UA</dd>
+        </dl>
+        <h1>ChessBot: Automated 3-Axis Chess-Playing Robot</h1>
+      </div>
+
+      <!-- Main video: demo -->
+      <div class="pm">
+        <video controls autoplay muted playsinline>
+          <source src="../assets/videos/chessbot-main.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Secondary media: two loop videos -->
+      <div class="pm2">
+        <div class="ph ph-media">
+          <video autoplay loop muted playsinline>
+            <source src="../assets/videos/chessbot-loop1.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="ph ph-media">
+          <video autoplay loop muted playsinline>
+            <source src="../assets/videos/chessbot-loop2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <!-- Problem Statement -->
+      <section class="ptxt grid">
+        <h2 class="lab">Problem Statement</h2>
+        <p class="b">The objective of this technical exercise was to build an automated system capable of playing chess against a human opponent while physically interacting with the chessboard. The core engineering challenge lay in bridging the gap between abstract game logic and physical actuation—specifically, enabling a Cartesian robot to accurately pick up, move, and remove pieces without human intervention.</p>
+      </section>
+
+      <!-- Proposed Solution -->
+      <section class="ptxt grid">
+        <h2 class="lab">Proposed Solution</h2>
+        <p class="b">I developed a comprehensive hardware-software architecture using a Siemens PLC to coordinate three stepper motors via the PROFINET protocol. The cognitive "brain" of the system is the Sunfish chess engine running in Python, which validates the player's moves and calculates the machine's response. Communication between the Python engine and the Siemens PLC is achieved through the OPC UA protocol. To complete the system, I designed a retro-1980s inspired HMI panel in TIA Portal, providing users with an intuitive interface to input their moves and control the system.</p>
+      </section>
+
+      <!-- Key Results -->
+      <section class="ptxt grid">
+        <h2 class="lab">Key Results</h2>
+        <ol>
+          <li>Successfully designed and deployed a complete IT/OT integration project, connecting high-level Python logic with low-level Siemens hardware.</li>
+          <li>Engineered precise electromechanical control for a 3-axis robotic system equipped with a DH-ROBOTICS electric gripper to handle chess pieces.</li>
+          <li>Developed a fully functional, user-friendly HMI that accurately maps chessboard coordinates, handles invalid move validation, and manages the homing routine.</li>
+        </ol>
+      </section>
+
+      <!-- Full report (PDF flipbook) -->
+      <section class="ptxt report grid">
+        <h2 class="lab">Full Report</h2>
+      </section>
+      <div class="pdfslot">
+        <div id="flipbook" class="flipbook flipbook-landscape"></div>
+      </div>
+
+      <!-- Previous / next project -->
+      <div class="pn">
+        <a href="warehouse-simulator.html">← 03 Multi-Robot Warehouse Optimi…</a>
+        <a href="berrybot.html">05 BerryBot: Automated Strawber… →</a>
+      </div>
+    </main>
+
+    <!-- Site footer -->
+    <footer>
+      <span>© 2026 Nicolò Girardello</span>
+      <a href="../contact.html">Contact Me</a>
+    </footer>
+
+  </div>
+
+  <!-- Flipbook dependencies: jQuery and dFlip -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dflip/js/dflip.min.js"></script>
+
+  <!-- Flipbook initialisation: slides (landscape) -->
+  <script>
+    $(document).ready(function () {
+      var options = {
+        // Landscape slides: show one slide at a time
+        singlePageMode: true,
+        webgl: true,
+        backgroundColor: "#f4f4f4",
+        soundEnable: false,
+        autoEnableOutline: false,
+        autoEnableThumbnail: false
+      };
+
+      $("#flipbook").flipBook("../assets/docs/chessbot-presentation.pdf", options);
+
+      // Stop the flipbook from capturing the mouse wheel,
+      // so scrolling the page does not zoom the PDF
+      var flipbook = document.getElementById("flipbook");
+      if (flipbook) {
+        flipbook.addEventListener("wheel", function (e) {
+          e.stopPropagation();
+        }, { capture: true });
+      }
+    });
+  </script>
+</body>
+</html>

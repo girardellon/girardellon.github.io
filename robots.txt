@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://girardellon.github.io/sitemap.xml

@@ -1,0 +1,930 @@
+/* ==========================================================================
+   Typographic grid portfolio – main stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Reset & base
+   -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #111;
+  --mut: #777;
+  --rule: #d9d9d9;
+  --f: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #fff;
+  color: var(--ink);
+  font: 400 15px/1.5 var(--f);
+  padding: 0 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.05;
+}
+
+/* Small uppercase label */
+.lab {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--mut);
+}
+
+/* --------------------------------------------------------------------------
+   Layout helpers
+   -------------------------------------------------------------------------- */
+.wrap {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* 12-column grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+}
+
+/* Vertical spacers */
+.spacer {
+  grid-column: 1 / -1;
+}
+
+.spacer-sm {
+  height: 3rem;
+}
+
+.spacer-md {
+  height: 5rem;
+}
+
+.spacer-lg {
+  height: 6rem;
+}
+
+/* --------------------------------------------------------------------------
+   Site header & footer
+   -------------------------------------------------------------------------- */
+header.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1.6rem 0;
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+header.top .nm {
+  font-weight: 700;
+}
+
+header.top nav a {
+  margin-left: 1.6rem;
+  color: var(--mut);
+}
+
+header.top nav a:hover,
+header.top nav a.active {
+  color: var(--ink);
+}
+
+header.top nav a.active {
+  border-bottom: 1px solid var(--ink);
+}
+
+footer {
+  border-top: 1px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0 2rem;
+  font-size: 12px;
+  color: var(--mut);
+}
+
+footer a:hover {
+  color: var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   Placeholders & media boxes
+   -------------------------------------------------------------------------- */
+.ph {
+  position: relative;
+  background: #f4f4f4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ph span {
+  background: #f4f4f4;
+  padding: .2rem .6rem;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--mut);
+}
+
+.ph-drawing {
+  background: #fff;
+  outline: 1px solid var(--rule);
+  outline-offset: -1px;
+}
+
+.ph-drawing span {
+  background: #fff;
+}
+
+/* Box holding a real image or video: square corners, no background.
+   Per-item framing (transform / object-position) is set inline. */
+.ph-media {
+  padding: 0;
+  background: transparent;
+}
+
+.ph-media > img,
+.ph-media > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   Home page
+   -------------------------------------------------------------------------- */
+
+/* Hero */
+.hero {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 13.5vw, 12.5rem);
+  letter-spacing: -.065em;
+  line-height: .86;
+  font-weight: 700;
+  margin-top: 10vh;
+}
+
+.hero .hm {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  align-items: end;
+  margin-top: 4rem;
+}
+
+.hero .role {
+  grid-column: 1 / 6;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+
+.hero .lk {
+  grid-column: 9 / 13;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  font-size: 13px;
+}
+
+.lk a:hover,
+.rowlinks a:hover {
+  text-decoration: underline;
+}
+
+/* Info grid */
+.info {
+  border-top: 1px solid var(--ink);
+  padding: 1.2rem 0 6rem;
+}
+
+.info > div:nth-child(1) {
+  grid-column: 1 / 5;
+}
+
+.info > div:nth-child(2) {
+  grid-column: 5 / 9;
+}
+
+.info > div:nth-child(3) {
+  grid-column: 9 / 13;
+}
+
+.info .lab {
+  margin-bottom: .9rem;
+}
+
+.info p {
+  margin-bottom: .5rem;
+}
+
+.info p strong {
+  font-weight: 700;
+}
+
+.info .more {
+  display: inline-block;
+  margin-top: .6rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* Generic section with heading row */
+section.sec {
+  border-top: 1px solid var(--ink);
+  padding: 1.2rem 0 6rem;
+}
+
+section.sec > .sh {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+/* Selected works */
+.work {
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--rule);
+}
+
+.work:first-of-type {
+  border-top: 0;
+}
+
+.work .num {
+  grid-column: 1 / 2;
+  font-size: 12px;
+  color: var(--mut);
+}
+
+.work .ph {
+  grid-column: 2 / 6;
+  aspect-ratio: 4 / 3;
+}
+
+.work .tx {
+  grid-column: 7 / 13;
+}
+
+.work h3 {
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  margin-bottom: .9rem;
+}
+
+.work .ctx {
+  color: var(--mut);
+  font-size: 13px;
+}
+
+.work .tg {
+  font-size: 13px;
+  margin-bottom: 1.2rem;
+}
+
+.work p.s {
+  max-width: 34em;
+  margin-bottom: 1.2rem;
+}
+
+.rowlinks {
+  display: flex;
+  gap: 1.4rem;
+  font-weight: 500;
+}
+
+.more-all {
+  font-weight: 500;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* --------------------------------------------------------------------------
+   Timeline (home page)
+   -------------------------------------------------------------------------- */
+.tl-scroll {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.tl-wrap {
+  min-width: 1100px;
+  position: relative;
+}
+
+/* Year axis */
+.tl-years {
+  display: flex;
+  height: 22px;
+}
+
+.tl-years .lc,
+.tl-lane .ln {
+  flex: 0 0 110px;
+}
+
+.tl-yr {
+  position: relative;
+  flex: 1;
+  border-bottom: 1px solid var(--ink);
+}
+
+.tl-yr span {
+  position: absolute;
+  bottom: 3px;
+  font-size: 11px;
+  color: var(--mut);
+  transform: translateX(2px);
+}
+
+/* Lanes */
+.tl-lane {
+  display: flex;
+}
+
+.tl-lane .ln {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--mut);
+  padding-top: 14px;
+}
+
+.trk {
+  position: relative;
+  flex: 1;
+  background: repeating-linear-gradient(to right, #e6e6e6 0 1px, transparent 1px 10%);
+}
+
+.l-edu .trk,
+.l-exp .trk {
+  height: 84px;
+}
+
+.l-prj .trk {
+  height: 52px;
+}
+
+/* Bars (education / experience) */
+.bar {
+  position: absolute;
+  height: 34px;
+  border-bottom: 2px solid var(--ink);
+  cursor: default;
+  outline: 0;
+}
+
+.bar.t0 {
+  top: 6px;
+}
+
+.bar.t1 {
+  top: 46px;
+}
+
+.bar span {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  white-space: nowrap;
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.bar:hover,
+.bar.is-active,
+.bar:focus {
+  border-bottom-width: 5px;
+}
+
+.bar.k-exp {
+  border-bottom-style: dashed;
+}
+
+/* Dots (projects) */
+.dot {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: #fff;
+  margin-left: -5px;
+}
+
+.dot.t0 {
+  top: 10px;
+}
+
+.dot.t1 {
+  top: 28px;
+}
+
+.dot:hover,
+.dot.is-active {
+  background: var(--ink);
+}
+
+/* Details panel */
+.tl-panel {
+  border-top: 1px solid var(--ink);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  min-height: 9rem;
+  max-width: 44rem;
+  margin-left: 110px;
+}
+
+.tl-panel h3 {
+  font-size: 1.4rem;
+  margin-bottom: .3rem;
+}
+
+.tl-sub,
+.tl-hint {
+  color: var(--mut);
+  font-size: 13px;
+  margin-bottom: .6rem;
+}
+
+.tl-rel {
+  margin-top: .8rem;
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+.tl-rel a {
+  font-weight: 500;
+  width: max-content;
+}
+
+.tl-rel a:hover {
+  text-decoration: underline;
+}
+
+.tl-rel strong {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--mut);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Page headings & lists (Projects, Education)
+   -------------------------------------------------------------------------- */
+.pgh {
+  padding: 5vh 0 3rem;
+}
+
+.pgh h1 {
+  font-size: clamp(2.6rem, 7vw, 6.5rem);
+  letter-spacing: -.05em;
+  line-height: .92;
+  max-width: 14em;
+}
+
+.pgh .lead {
+  max-width: 32em;
+  margin-top: 2rem;
+  font-size: 1.15rem;
+  color: var(--mut);
+}
+
+.cat {
+  margin: 5rem 0 1.2rem;
+}
+
+/* Projects list */
+.plist .r {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--rule);
+  align-items: baseline;
+}
+
+.plist .r:hover {
+  background: linear-gradient(#f7f7f7, #f7f7f7);
+}
+
+.plist .d {
+  grid-column: 1 / 3;
+  font-size: 12px;
+  color: var(--mut);
+}
+
+.plist h3 {
+  grid-column: 3 / 8;
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+}
+
+.plist .m {
+  grid-column: 8 / 13;
+  font-size: 13px;
+}
+
+.plist .m .c {
+  color: var(--mut);
+}
+
+.plist .sm {
+  grid-column: 3 / 8;
+  margin-top: .8rem;
+  max-width: 32em;
+}
+
+.plist .rowlinks {
+  grid-column: 8 / 13;
+  margin-top: .8rem;
+  font-size: 13px;
+}
+
+/* Education list */
+.edu .r {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  padding: 1.6rem 0 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.edu .when {
+  grid-column: 1 / 4;
+  font-size: 12px;
+  color: var(--mut);
+}
+
+.edu .what {
+  grid-column: 4 / 11;
+}
+
+.edu h3 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  margin-bottom: .8rem;
+}
+
+.edu p {
+  max-width: 38em;
+  margin-bottom: .5rem;
+}
+
+.edu .lab {
+  margin-bottom: .8rem;
+}
+
+/* --------------------------------------------------------------------------
+   Project pages
+   -------------------------------------------------------------------------- */
+
+/* Project header */
+.ph-head {
+  padding: 4vh 0 3rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.ph-head h1 {
+  grid-column: 4 / 13;
+  font-size: clamp(2.2rem, 5.4vw, 5rem);
+  letter-spacing: -.045em;
+  line-height: .95;
+}
+
+.ph-head dl {
+  grid-column: 1 / 4;
+  font-size: 12px;
+}
+
+.ph-head dt {
+  color: var(--mut);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 10.5px;
+  margin-top: .9rem;
+}
+
+.ph-head dt:first-child {
+  margin-top: 0;
+}
+
+/* Main media (full width) */
+.pm {
+  padding: 2rem 0;
+}
+
+.pm .ph {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+}
+
+.pm .ph.ph-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.pm > img,
+.pm > video {
+  display: block;
+  width: 100%;
+}
+
+/* Main media without top padding (follows a text section) */
+.pm-flush {
+  padding-top: 0;
+}
+
+/* Secondary media (two columns) */
+.pm2 {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 24px;
+  padding-bottom: 2rem;
+}
+
+.pm2 .ph {
+  aspect-ratio: 4 / 3;
+}
+
+.pm2 .ph:nth-child(2) {
+  aspect-ratio: auto;
+}
+
+/* Text sections */
+.ptxt {
+  border-top: 1px solid var(--ink);
+  padding: 1.2rem 0 3rem;
+}
+
+.ptxt .lab {
+  grid-column: 1 / 4;
+}
+
+.ptxt .b {
+  grid-column: 4 / 11;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  max-width: 36em;
+}
+
+.ptxt ol {
+  list-style: none;
+  counter-reset: n;
+  grid-column: 4 / 12;
+}
+
+.ptxt li {
+  counter-increment: n;
+  border-top: 1px solid var(--rule);
+  padding: 1rem 0 1rem 3rem;
+  position: relative;
+  max-width: 40em;
+}
+
+.ptxt li::before {
+  content: counter(n, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  font-size: 12px;
+  color: var(--mut);
+  top: 1.15rem;
+}
+
+/* "Full Report" heading sits closer to the PDF viewer */
+.ptxt.report {
+  margin-bottom: 2rem;
+}
+
+/* PDF flipbook (dFlip) */
+.pdfslot {
+  padding: 1rem;
+  background: #f4f4f4;
+}
+
+.flipbook {
+  width: 100%;
+  height: 600px;
+}
+
+/* Landscape documents (slides) need less height */
+.flipbook-landscape {
+  height: 400px;
+}
+
+/* Hide dFlip buttons that are not needed: share, outline, bookmark */
+.df-ui-btn.df-ui-share,
+.df-ui-btn.df-ui-outline,
+.df-ui-btn.df-ui-bookmark {
+  display: none !important;
+}
+
+/* Previous / next project navigation */
+.pn {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--ink);
+  padding: 1.2rem 0 5rem;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Contact page
+   -------------------------------------------------------------------------- */
+.ct .big {
+  font-size: clamp(3rem, 10vw, 9rem);
+  letter-spacing: -.06em;
+  line-height: .88;
+  font-weight: 700;
+  margin: 6vh 0 3rem;
+}
+
+.ct .intro {
+  grid-column: 1 / 6;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.ct .ln {
+  grid-column: 8 / 13;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.ct .ln a {
+  border-top: 1px solid var(--rule);
+  padding: .5rem 0;
+}
+
+.ct .ln a:hover {
+  padding-left: .5rem;
+}
+
+.ct > .grid > .lab {
+  grid-column: 1 / 6;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+  max-width: 30rem;
+  grid-column: 1 / 6;
+  margin: 4rem 0 6rem;
+}
+
+.form label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--mut);
+  display: grid;
+  gap: .3rem;
+}
+
+.form input,
+.form textarea {
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: .4rem 0;
+  background: none;
+  border-radius: 0;
+  outline: 0;
+  resize: vertical;
+}
+
+.form button {
+  justify-self: start;
+  font: inherit;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: .2rem 0;
+  cursor: pointer;
+}
+
+/* Honeypot field for spam bots: hidden off-screen */
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+
+/* --------------------------------------------------------------------------
+   404 page
+   -------------------------------------------------------------------------- */
+.nf {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nf h1 {
+  font-size: clamp(7rem, 28vw, 24rem);
+  letter-spacing: -.08em;
+  line-height: .8;
+}
+
+.nf .lab {
+  margin: 1.5rem 0;
+}
+
+.nf .nf-text {
+  max-width: 28em;
+}
+
+.nf .nf-link {
+  margin-top: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive: tablets and phones (max 860px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  body {
+    padding: 0 1.1rem;
+  }
+
+  /* Every grid child spans the full width */
+  .grid > *,
+  .hero .hm > *,
+  .work > *,
+  .plist .r > *,
+  .edu .r > *,
+  .ptxt > *,
+  .ph-head > *,
+  .ct .grid > *,
+  .form {
+    grid-column: 1 / -1 !important;
+  }
+
+  .hero .hm {
+    row-gap: 1.5rem;
+  }
+
+  .work,
+  .plist .r,
+  .edu .r,
+  .ph-head,
+  .ptxt,
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .work .ph {
+    margin: 1rem 0;
+  }
+
+  .info > div {
+    margin-bottom: 2rem;
+  }
+
+  .pm2 {
+    grid-template-columns: 1fr;
+  }
+
+  .ph-head dl {
+    margin-bottom: 1.5rem;
+  }
+
+  .tl-panel {
+    margin-left: 0;
+  }
+
+  .plist .d {
+    margin-bottom: .3rem;
+  }
+}

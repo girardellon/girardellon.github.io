@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page metadata -->
+  <title>Multi-Robot Warehouse Optimization Simulator · Nicolò Girardello</title>
+  <meta name="description" content="Portfolio of Nicolò Girardello, MSc Student in Control Systems Engineering. Exploring robotics, machine learning, and automation.">
+  <meta name="author" content="Nicolò Girardello">
+  <link rel="canonical" href="https://girardellon.github.io/projects/warehouse-simulator.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Multi-Robot Warehouse Optimization Simulator · Nicolò Girardello">
+  <meta property="og:description" content="Portfolio of Nicolò Girardello, MSc Student in Control Systems Engineering. Exploring robotics, machine learning, and automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://girardellon.github.io/projects/warehouse-simulator.html">
+  <meta property="og:image" content="https://girardellon.github.io/assets/images/og-image.jpg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Icons and manifest -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png?v=2">
+  <link rel="icon" href="../favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Site header -->
+    <header class="top">
+      <a class="nm" href="../index.html">Nicolò Girardello</a>
+      <nav>
+        <a href="../index.html">Index</a>
+        <a href="../education.html">Education</a>
+        <a href="../projects.html" class="active" aria-current="page">Projects</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Project header -->
+      <div class="ph-head grid">
+        <dl>
+          <dt>Date</dt>
+          <dd>Dec 2025</dd>
+          <dt>Category</dt>
+          <dd>Robotics &amp; Control Systems</dd>
+          <dt>Stack</dt>
+          <dd>MATLAB · App Designer · Path Planning (A*/Dijkstra)</dd>
+        </dl>
+        <h1>Multi-Robot Warehouse Optimization Simulator</h1>
+      </div>
+
+      <!-- Main media (placeholder) -->
+      <div class="pm">
+        <div class="ph ph-video"><span>Interactive GUI Screenshot</span></div>
+      </div>
+
+      <!-- Secondary media (placeholders) -->
+      <div class="pm2">
+        <div class="ph ph-render"><span>GUI screenshot</span></div>
+        <div class="ph ph-drawing"><span>Grid diagram</span></div>
+      </div>
+
+      <!-- Problem Statement -->
+      <section class="ptxt grid">
+        <h2 class="lab">Problem Statement</h2>
+        <p class="b">Modern automated warehouses rely on multi-robot fleets to maximize throughput, presenting complex engineering challenges in path planning, coordination, and energy optimization. The objective was to solve how multiple autonomous robots can efficiently navigate a shared discrete 2D grid, fulfill dynamic orders, and avoid conflicts in real-time without suffering from computational bottlenecks.</p>
+      </section>
+
+      <!-- Simulation still (placeholder) -->
+      <div class="pm pm-flush">
+        <div class="ph ph-render ph-16-9"><span>Simulation still</span></div>
+      </div>
+
+      <!-- Proposed Solution -->
+      <section class="ptxt grid">
+        <h2 class="lab">Proposed Solution</h2>
+        <p class="b">I engineered a fully functional, object-oriented MATLAB application with a custom App Designer GUI. The core relies on grid-based path planning using both A* (Manhattan, Euclidean, Chebyshev) and Dijkstra algorithms. I developed a priority-based coordination framework for collision avoidance, a greedy nearest-robot algorithm for task assignment, and a dynamic battery consumption model that autonomously routes depleted robots to charging stations.</p>
+      </section>
+
+      <!-- Key Results -->
+      <section class="ptxt grid">
+        <h2 class="lab">Key Results</h2>
+        <ol>
+          <li>Successfully simulated complex logistics scenarios with up to 6 concurrent robots in dense, obstacle-heavy environments.</li>
+          <li>Demonstrated and quantified the computational efficiency of the heuristic-guided A* algorithm over Dijkstra, achieving identical paths while exploring significantly fewer nodes.</li>
+          <li>Validated the robustness of the priority-based collision avoidance and energy-aware task allocation logic during high-intensity operations.</li>
+        </ol>
+      </section>
+
+      <!-- Previous / next project -->
+      <div class="pn">
+        <a href="redundancy-control.html">← 02 Redundancy Resolution: Kinem…</a>
+        <a href="chessbot.html">04 ChessBot: Automated 3-Axis C… →</a>
+      </div>
+    </main>
+
+    <!-- Site footer -->
+    <footer>
+      <span>© 2026 Nicolò Girardello</span>
+      <a href="../contact.html">Contact Me</a>
+    </footer>
+
+  </div>
+</body>
+</html>
