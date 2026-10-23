@@ -3,6 +3,8 @@
 Personal portfolio website of **Nicolò Girardello**, MSc Student in Control Systems Engineering at the University of Padua. 
 This repository hosts a showcase of academic, personal, and competition projects spanning robotics, automation, control systems, and machine learning.
 
+**Live Demo:** [girardellon.github.io](https://girardellon.github.io/)
+
 ## Tech Stack
 - **HTML5**
 - **CSS3** (Custom properties, Flexbox/Grid)
