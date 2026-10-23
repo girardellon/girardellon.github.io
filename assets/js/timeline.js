@@ -78,7 +78,7 @@ var TL = {
   },
   "robotac": {
     "title": "Robotics Research Intern",
-    "sub": "RoboTac, Italy",
+    "sub": "RoboTac Lab at BMW Group, Germany",
     "dates": "Feb 2026",
     "desc": "Worked on ROS2-based robotic systems in a research environment. Contributed to robot system integration, motion planning, and experimental validation.",
     "projects": []
@@ -130,6 +130,18 @@ var TL = {
     "desc": "A multimodal representation framework projecting DIGIT optical tactile signals into the frozen visual latent space of a Vision-Language-Action model.",
     "projects": [],
     "open": "projects/bsc-thesis.html"
+  },
+  "c-automation-2022": {
+    "title": "National Automation Competition",
+    "sub": "IIS “Belluzzi – Fioravanti”, Bologna, Italy",
+    "dates": "May 2022",
+  "desc": "Won this individual national competition, sponsored by Omron. It combined a theory test on electrical engineering with a practical challenge: programming an industrial plant with a PLC and developing its human-machine interface (HMI)."
+  },
+  "c-machine-tool-2023": {
+    "title": "Machine Tool and Mechatronics Olympics",
+    "sub": "Confindustria Vicenza, Italy",
+    "dates": "Mar 2023",
+    "desc": "Won this practical competition organized by Confindustria Vicenza, in which participants had to develop a solution to a specific industrial requirement set by the organizers."
   }
 };
 

@@ -46,29 +46,18 @@
 
       <div class="grid">
         <!-- Intro -->
-        <p class="intro">I'm currently open to new opportunities, research collaborations, and discussions about robotics and control systems. The fastest way to reach me is via LinkedIn or direct email.</p>
+        <p class="intro">I'm currently open to new opportunities and research collaborations. The fastest way to reach me is via LinkedIn or direct email.</p>
 
         <!-- Social links -->
         <div class="ln">
+          <a href="#" id="mail-link">Email &#8599;&#xFE0E;</a>
           <a href="https://linkedin.com/in/nicol%C3%B2-girardello" target="_blank" rel="noopener">LinkedIn &#8599;&#xFE0E;</a>
           <a href="https://github.com/girardellon" target="_blank" rel="noopener">GitHub &#8599;&#xFE0E;</a>
           <a href="assets/docs/cv.pdf" target="_blank" rel="noopener">Download CV ↓</a>
         </div>
 
-        <div class="spacer spacer-sm"></div>
+        <div class="spacer spacer-lg"></div>
 
-        <!-- Contact form (handled by Formspree) -->
-        <p class="lab">Prefer to send a message?</p>
-        <form class="form" action="https://formspree.io/f/xdeenjwo" method="POST">
-          <label>Name<input type="text" name="name" required autocomplete="name"></label>
-          <label>Email<input type="email" name="email" required autocomplete="email"></label>
-          <label>Message<textarea name="message" rows="6" required></textarea></label>
-
-          <!-- Honeypot field against spam bots: must stay empty and hidden -->
-          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-          <button type="submit">Send message →</button>
-        </form>
       </div>
     </main>
 
@@ -79,5 +68,16 @@
     </footer>
 
   </div>
+
+  <!-- Email link: the address is assembled on click, so scrapers cannot read it from the HTML -->
+  <script>
+    document.getElementById("mail-link").addEventListener("click", function (e) {
+      e.preventDefault();
+      var user = "gira" + ".girardello";
+      var domain = "gmail" + ".com";
+      window.location.href = "mailto:" + user + "@" + domain;
+    });
+  </script>
+
 </body>
 </html>
