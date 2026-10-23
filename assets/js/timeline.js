@@ -109,7 +109,7 @@ var TL = {
   },
   "p-warehouse-simulator": {
     "title": "Multi-Robot Warehouse Optimization Simulator",
-    "sub": "Course \"MATLAB and its application in engineering\" · UPC Barcelona",
+    "sub": "\"MATLAB and its application in engineering\" · UPC Barcelona",
     "dates": "Dec 2025",
     "desc": "A MATLAB simulation framework featuring custom path-planning algorithms, priority-based collision avoidance, and energy-aware robot management.",
     "projects": [],
@@ -117,7 +117,7 @@ var TL = {
   },
   "p-redundancy-control": {
     "title": "Redundancy Resolution: Kinematic Control for Franka Panda",
-    "sub": "Course \"Introduction to Robotics\" · University of Padua",
+    "sub": "\"Introduction to Robotics\" · University of Padua",
     "dates": "Jun 2026",
     "desc": "A kinematic control framework combining CLIK and null-space projection to optimize joint configuration while preserving end-effector trajectory tracking.",
     "projects": [],
