@@ -59,13 +59,17 @@ var TL = {
       {
         "name": "Multi-Robot Warehouse Optimization Simulator",
         "href": "projects/warehouse-simulator.html"
+      },
+      {
+        "name": "Line Following & Evolutionary Obstacle Avoidance",
+        "href": "projects/left-robotics.html"
       }
     ]
   },
   "msc": {
     "title": "MSc Control Systems Engineering",
     "sub": "University of Padua, Italy",
-    "dates": "Sep 2026 — Jul 2028",
+    "dates": "Sep 2026 — Present",
     "desc": "Focused on control systems, robotics, autonomous systems, and artificial intelligence, with emphasis on robot control, reinforcement learning, computer vision, and deep learning.",
     "projects": []
   },
@@ -85,8 +89,8 @@ var TL = {
   },
   "p-smart-warehouse": {
     "title": "Smart Warehouse: Automated Material Dispensing",
-    "sub": "Institutional SCRUM Project · ITIS Alessandro Rossi",
-    "dates": "Apr 2021 — May 2021",
+    "sub": "SCRUM Project · ITIS Alessandro Rossi",
+    "dates": "May 2021",
     "desc": "An automated carousel storage and dosing system designed to streamline raw material selection and improve dispensing precision through an integrated Archimedes screw.",
     "projects": [],
     "open": "projects/smart-warehouse.html"
@@ -94,7 +98,7 @@ var TL = {
   "p-berrybot": {
     "title": "BerryBot: Automated Strawberry Harvesting System",
     "sub": "Siemens Automation Olympics 2022",
-    "dates": "Jan 2022 — May 2022",
+    "dates": "May 2022",
     "desc": "An automated greenhouse harvesting system combining computer vision and a robotic arm to identify and pick ripe strawberries.",
     "projects": [],
     "open": "projects/berrybot.html"
@@ -102,7 +106,7 @@ var TL = {
   "p-chessbot": {
     "title": "ChessBot: Automated 3-Axis Chess-Playing Robot",
     "sub": "Personal Project",
-    "dates": "Oct 2022 — Nov 2022",
+    "dates": "Nov 2022",
     "desc": "A 3-axis Cartesian robot integrating a Siemens PLC with a Python-based chess engine to translate game logic into precise physical movements.",
     "projects": [],
     "open": "projects/chessbot.html"
@@ -133,16 +137,24 @@ var TL = {
   },
   "c-automation-2022": {
     "title": "National Automation Competition",
-    "sub": "IIS “Belluzzi – Fioravanti”, Bologna, Italy",
+    "sub": "National Automation Competition",
     "dates": "May 2022",
   "desc": "Won a national individual competition sponsored by Omron, combining a theoretical test in electrical engineering with a practical challenge involving PLC programming for an industrial plant and the development of its human-machine interface (HMI)."
   },
   "c-machine-tool-2023": {
     "title": "Machine Tool and Mechatronics Olympics",
-    "sub": "Confindustria Vicenza, Italy",
+    "sub": "Confindustria Vicenza",
     "dates": "Mar 2023",
     "desc": "Won a practical competition organised by Confindustria Vicenza, challenging participants to develop a technical solution to an industrial problem defined by the organisers."
-  }
+  },
+  "p-left-robotics": {
+    "title": "Line Following & Evolutionary Obstacle Avoidance",
+    "sub": "\"Sensors, Actuators & Microcontrollers\" · UPC Barcelona",
+    "dates": "Jan 2026",
+    "desc": "A study of mobile-robot navigation combining mBot hardware analysis and inertial-sensing design proposals, PID-based line following in Webots, and genetic-algorithm optimisation of neural controllers for autonomous obstacle avoidance.",
+    "projects": [],
+    "open": "projects/left-robotics.html"
+  },
 };
 
 (function () {
@@ -176,7 +188,7 @@ var TL = {
 
     // Direct link to the project page (project dots)
     if (d.open) {
-      html += '<div class="tl-rel"><a href="' + d.open + '">Open project →</a></div>';
+      html += '<div class="tl-rel"><a href="' + d.open + '">Explore →</a></div>';
     }
 
     panel.innerHTML = html;
